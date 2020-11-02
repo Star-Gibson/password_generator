@@ -179,7 +179,10 @@ function writePassword() {
   else {
     alert("Please select at least one: Lowercase letters, Uppercase letters, numbers, or special characters");
   }
+  }
   
+  else { 
+    alert("Please select a number between 8-128!")
   }
 }
 
