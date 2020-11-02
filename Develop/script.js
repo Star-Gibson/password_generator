@@ -221,6 +221,7 @@ function writePassword() {
       }
       generate(NPwdLength);
     }
+
     //14 - Symbols
     else if (NPwdLength >= 8 && NPwdLength <= 128 && confirmSymbols) {
       function generate(length = NPwdLength) {
@@ -235,6 +236,7 @@ function writePassword() {
       }
       generate(NPwdLength);
     }
+
     //Alert to ensure that at least one type of character is chosen.
     else {
         alert("Please select at least one: Lowercase letters, Uppercase letters, numbers, or special characters");
@@ -244,13 +246,8 @@ function writePassword() {
     else {
       alert("Please select a number between 8-128!")
     }
+    console.log(generate(NPwdLength))
   }
   
-
-
-
-
-
-
   // Add event listener to generate button
   generateBtn.addEventListener("click", writePassword);
