@@ -25,3 +25,6 @@ This app will run in the browser, and will feature dynamically updated HTML and 
 
 ## Credits
 - Star Gibson (https://github.com/Star-Gibson)
+- w3schools.com (https://www.w3schools.com/jsref/met_document_addeventlistener.asp)
+- MDN Web Docs (https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+- Youtube (https://www.youtube.com/watch?v=9sT03jEwcaw , https://www.youtube.com/watch?v=duNmhKgtcsI)
