@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
 
-  var PLength = prompt("Enter Desired Password Length. Min 8 Characters and 128 Max.");
+  var PLength = prompt("Enter desired length of password. Min 8 Characters and 128 Max.");
 
   // Verification that Password is 8-128 characters and creates array dictated by User's answer. 
   if (PLength >= 8 && PLength <= 128) {
@@ -117,7 +117,64 @@ function writePassword() {
       generate(NPwdLength)
     }
 
+    //7 - Uppercase, Symbols
+ else if (NPwdLength >= 8 && NPwdLength <= 128 && confirmUppercase && confirmSymbols) {
+  function generate (length = NPwdLength) {
+    var all = upperCase + symbols;
+    var password = '';
+    for (var index = 0; index < length; index++) {
+      var character = Math.floor(Math.random() * all.length);
+      password += all[(character, character + 1)];
+    }
+    document.getElementById("password").innerHTML = password;
+    return password;
+  }
+  generate(NPwdLength)
+}
 
+    //8 - Uppercase, Number
+ else if (NPwdLength >= 8 && NPwdLength <= 128 && confirmUppercase && confirmNumbers) {
+  function generate (length = NPwdLength) {
+    var all = upperCase + numbers;
+    var password = '';
+    for (var index = 0; index < length; index++) {
+      var character = Math.floor(Math.random() * all.length);
+      password += all[(character, character + 1)];
+    }
+    document.getElementById("password").innerHTML = password;
+    return password;
+  }
+  generate(NPwdLength)
+}
+
+    //9 - Lowercase, Symbols
+ else if (NPwdLength >= 8 && NPwdLength <= 128 && confirmLowercase && confirmSymbols) {
+  function generate (length = NPwdLength) {
+    var all = lowerCase + symbols;
+    var password = '';
+    for (var index = 0; index < length; index++) {
+      var character = Math.floor(Math.random() * all.length);
+      password += all[(character, character + 1)];
+    }
+    document.getElementById("password").innerHTML = password;
+    return password;
+  }
+  generate(NPwdLength)
+}
+   //10 - Lowercase, Numbers
+   else if (NPwdLength >= 8 && NPwdLength <= 128 && confirmLowercase && confirmNumbers) {
+    function generate (length = NPwdLength) {
+      var all = lowerCase + numbers;
+      var password = '';
+      for (var index = 0; index < length; index++) {
+        var character = Math.floor(Math.random() * all.length);
+        password += all[(character, character + 1)];
+      }
+      document.getElementById("password").innerHTML = password;
+      return password;
+    }
+    generate(NPwdLength)
+  }
   }
 }
 
