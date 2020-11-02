@@ -21,6 +21,7 @@ This app will run in the browser, and will feature dynamically updated HTML and 
 - Access WebPage: https://star-gibson.github.io/password_generator /
 - Provide feedback for cleaner code.
 - Screenshot: 
+![star-gibson github io_password_generator_](https://user-images.githubusercontent.com/72622031/97914779-67a4a580-1d1e-11eb-84eb-37cd2625a3df.png)
   
 
 ## Credits
