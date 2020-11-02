@@ -1,4 +1,4 @@
-// Assignment Code
+// Assignment Code - Dont Touch! 
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -6,7 +6,7 @@ function writePassword() {
 
   var PLength = prompt("Enter desired length of password. Password length must be between 8-128 characters!");
 
-  // Verification that Password is 8-128 characters and creates array dictated by User's answer. 
+  //Verification that Password is 8-128 characters and creates array dictated by User's answer. 
   if (PLength >= 8 && PLength <= 128) {
     var NPwdLength = parseInt(PLength);
     //NPwdLength = PLength;
@@ -248,6 +248,19 @@ function writePassword() {
   }
   console.log(generate(NPwdLength))
 }
+
+//Attempt at Clipboard function
+function copyClipboard() {
+  var copy = document.getElementById("password");
+  var text = copy.textContent;
+  if (text.length > 0) {
+    copy.select()
+    copy.setSelectionRange (0, 99999)
+    document.execCommand("copy");
+    alert("Copied to Clipboard.");
+  }
+}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
