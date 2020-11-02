@@ -8,7 +8,7 @@ function writePassword() {
 
   // Verification that Password is 8-128 characters and creates array dictated by User's answer. 
   if (PLength >= 8 && PLength <= 128) {
-    var NPwdLength = parseInt(PwdLength);
+    var NPwdLength = parseInt(PLength);
     //NPwdLength = PLength;
 
     //console.log(NPwdLength);
@@ -54,7 +54,7 @@ function writePassword() {
         document.getElementById("password").innerHTML = password;
         return password;
       }
-      generate(NPwdLength)
+      generate(NPwdLength);
     }
 
     // 3 - Uppercase, Lowercase, Symbols
@@ -69,7 +69,7 @@ function writePassword() {
         document.getElementById("password").innerHTML = password;
         return password;
       }
-      generate(NPwdLength)
+      generate(NPwdLength);
     }
 
     //4 - Uppercase, Numbers, Symbols
@@ -84,7 +84,7 @@ function writePassword() {
         document.getElementById("password").innerHTML = password;
         return password;
       }
-      generate(NPwdLength)
+      generate(NPwdLength);
     }
 
     //5 - Lowercase, Numbers, Symbols
@@ -99,7 +99,7 @@ function writePassword() {
         document.getElementById("password").innerHTML = password;
         return password;
       }
-      generate(NPwdLength)
+      generate(NPwdLength);
     }
 
     //6 - Uppercase, Lowercase
@@ -114,7 +114,7 @@ function writePassword() {
         document.getElementById("password").innerHTML = password;
         return password;
       }
-      generate(NPwdLength)
+      generate(NPwdLength);
     }
 
     //7 - Uppercase, Symbols
@@ -129,7 +129,7 @@ function writePassword() {
     document.getElementById("password").innerHTML = password;
     return password;
   }
-  generate(NPwdLength)
+  generate(NPwdLength);
 }
 
     //8 - Uppercase, Number
@@ -144,7 +144,7 @@ function writePassword() {
     document.getElementById("password").innerHTML = password;
     return password;
   }
-  generate(NPwdLength)
+  generate(NPwdLength);
 }
 
     //9 - Lowercase, Symbols
@@ -159,7 +159,7 @@ function writePassword() {
     document.getElementById("password").innerHTML = password;
     return password;
   }
-  generate(NPwdLength)
+  generate(NPwdLength);
 }
    //10 - Lowercase, Numbers
    else if (NPwdLength >= 8 && NPwdLength <= 128 && confirmLowercase && confirmNumbers) {
@@ -173,8 +173,13 @@ function writePassword() {
       document.getElementById("password").innerHTML = password;
       return password;
     }
-    generate(NPwdLength)
+    generate(NPwdLength);
   }
+
+  else {
+    alert("Please select at least one: Lowercase letters, Uppercase letters, numbers, or special characters");
+  }
+  
   }
 }
 
