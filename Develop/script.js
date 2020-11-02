@@ -239,15 +239,15 @@ function writePassword() {
 
     //Alert to ensure that at least one type of character is chosen.
     else {
-        alert("Please select at least one: Lowercase letters, Uppercase letters, numbers, or special characters");
-      }
+      alert("Please select at least one: Lowercase letters, Uppercase letters, numbers, or special characters");
     }
-    //Alert to ensure that password length is between 8-128 characters.
-    else {
-      alert("Please select a number between 8-128!")
-    }
-    console.log(generate(NPwdLength))
   }
-  
-  // Add event listener to generate button
-  generateBtn.addEventListener("click", writePassword);
+  //Alert to ensure that password length is between 8-128 characters.
+  else {
+    alert("Please select a number between 8-128!")
+  }
+  console.log(generate(NPwdLength))
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
