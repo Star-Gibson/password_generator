@@ -13,10 +13,10 @@ function writePassword() {
 
     console.log(NPwdLength);
 
-    var confirmUppercase = confirm("Have Password Contain Uppercase Letters?");
-    var confirmNumbers = confirm("Have Password Contain Numbers?");
-    var confirmLowercase = confirm("Have Password Contain Lowercase Letters?");
-    var confirmSymbols = confirm("Have Password Contain Special Characters?");
+    var confirmUppercase = confirm("Press OK if password should contain uppercase letters.");
+    var confirmNumbers = confirm("Press OK if password should contain numbers.");
+    var confirmLowercase = confirm("Press OK if password should contain lowercase letters.");
+    var confirmSymbols = confirm("Press OK if password should contain symbols/special characters.");
 
     var NPwdLength;
 
@@ -249,18 +249,17 @@ function writePassword() {
   console.log(generate(NPwdLength))
 }
 
-//Attempt at Clipboard function
-function copyClipboard() {
-  var copy = document.getElementById("password");
-  var text = copy.textContent;
-  if (text.length > 0) {
-    copy.select()
-    copy.setSelectionRange (0, 99999)
-    document.execCommand("copy");
-    alert("Copied to Clipboard.");
-  }
-}
-
+// //Attempt at Clipboard function
+// function copyClipboard() {
+//   var copy = document.getElementById("password");
+//   var text = copy.textContent;
+//   if (text.length > 0) {
+//     copy.select()
+//     copy.setSelectionRange(0, 99999)
+//     document.execCommand("copy");
+//     alert("Copied to Clipboard.");
+//   }
+// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
