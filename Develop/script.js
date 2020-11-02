@@ -27,7 +27,7 @@ function writePassword() {
 
     //User's Choices 
 
-    // 1.) All options
+    // 1 - All options
     if (NPwdLength >= 8 && NPwdLength <= 128 && confirmUppercase && confirmNumbers && confirmLowercase && confirmSpecial) {
       function generate(length = NPwdLength) {
         var all = upperCase + numbers + lowerCase + symbols;
@@ -41,6 +41,27 @@ function writePassword() {
       }
       generate(NPwdLength);
     }
+
+    // 2 - Uppercase, Lowercase, Numbers
+    else if (NPwdLength >= 8 && NPwdLength <= 128 && confirmUppercase && confirmLowercase && confirmNumbers) {
+      function generate (length = NPwdLength) {
+        var all = upperCase + lowerCase + numbers;
+        var password = '';
+        for (var index = 0; index < length; index++) {
+          var character = Math.floor(Math.random() * all.length);
+          password += all[(character, character + 1)];
+        }
+        document.getElementById("password").innerHTML = password;
+        return password;
+      }
+      generate(NPwdLength)
+    }
+
+
+
+
+
+
   }
 }
 
